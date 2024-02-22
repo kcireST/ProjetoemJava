@@ -1,0 +1,304 @@
+ex 1 :
+package Fatec;
+
+import java.util.Scanner;
+
+public class Fateclass {
+
+
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+        Scanner ler = new Scanner(System.in);
+        System.out.println("Digite um número!");
+        double numero = ler.nextDouble();
+
+
+        if (numero > 0){
+            System.out.println("Seu número é positivo");}
+
+
+        else {
+            System.out.println("seu número é negativo");
+        }
+
+
+
+
+
+
+    }
+
+}
+
+ex 2 :
+package Aula1;
+
+import java.util.Scanner;
+
+
+public class a {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner ler = new Scanner(System.in);
+		int n1,n2;
+		System.out.println("Escreva o primeiro numero : ");
+		n1 = ler.nextInt();
+		System.out.println("Escreva o seugundo numero : ");
+		n2 = ler.nextInt();
+		
+		if(n1 == n2) {
+			System.out.println("esses numeros são iguais");
+		}
+		if(n1 > n2) {
+			System.out.println("Os numeros são diferentes, porém o primeiro numero é maior");
+		}
+		if (n1<n2) {
+			System.out.println("Os numeros sao diferentes, porém o segundo numero é maior");
+		}
+
+	}
+
+}
+
+ex 3 :
+package Aula1;
+
+import java.util.Scanner;
+
+public class Menu {
+
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+        double n1,r = 0, PI =3.14;
+        int valor;
+        Scanner ler = new Scanner(System.in);
+        String menu = """
+                **
+                1- Areá do quadrado;
+                2 - areá do circulo;
+                **
+                """; 
+        System.out.println("Nessa calculadora você poderá calcular a área do circulo ou do quadrado, digite o lado do quadrado ou o raio do circulo: ");
+        n1 = ler.nextDouble();
+
+
+
+        System.out.println(menu);
+        valor = ler.nextInt();
+        switch(valor) {
+
+      case 1:
+          r = n1 * n1;
+             break;
+
+      case 2:
+          r = (n1 n1)PI ;
+             break;
+             default:
+                 System.out.println("Valor não corresponde as opcões");
+      }
+
+     System.out.println("O resultado é: " + r);
+}
+
+ex 4 :
+package Aula1;
+
+import java.util.Scanner;
+
+public class tabuada {
+
+    public static void main(String[] args) {
+      Scanner ler = new Scanner(System.in);
+
+        System.out.println("Digite a tabuada que deseja : ");
+        int i = ler.nextInt();
+
+        for ( i = 0; i <= 10; i++) {
+            System.out.println("Tabuada do " + i + ":");
+
+
+            for (int j = 1; j <= 10; j++) {
+                int resultado = i * j;
+                System.out.println(i + " x " + j + " = " + resultado);
+            }
+
+
+            System.out.println();
+        }
+    }
+
+
+    }
+
+ex 5 :
+
+package Aula1;
+
+import java.util.Scanner;
+
+public class numPar {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Scanner ler = new Scanner(System.in);
+		
+		System.out.println("Digite um numero");
+		int numero = ler.nextInt();
+		if(numero % 2 == 0) {
+			System.out.println("Seu numero é par");
+		}
+		else {
+			System.out.println("Seu numero é impar");
+		}
+		
+
+	}
+
+}
+
+ex 6 : 
+
+package Aula1;
+
+import java.util.Scanner;
+
+public class fatorial {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner ler = new Scanner(System.in);
+		System.out.println("Digite um numero inteiro");
+		int num = ler.nextInt();
+		int fatorial = 1;
+		
+		for( int i = 1 ; i<=num; i++){
+			fatorial *= i ;
+		}
+		 
+		System.out.println(" O fatorial de "  +  num  + " é "  + fatorial);
+		ler.close();
+
+	}
+
+}
+
+ex 7 :
+
+package Aula1;
+
+import java.util.Scanner;
+
+public class idades {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner ler = new Scanner(System.in);
+		
+		System.out.println("Digite a sua idade");
+		int idade = ler.nextInt();
+		
+		if(idade >=0 && idade<=17) {
+			System.out.println("Menor de idade");
+		}
+		if(idade>=18 && idade<=59) {
+			System.out.println("Voce é adulto");
+		}
+		if(idade > 60) {
+			System.out.println("Idoso");
+		}
+
+	}
+
+}
+
+ex 8 :
+package Aula1;
+
+import java.util.Scanner;
+
+
+public class somadeimpar {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Scanner ler = new Scanner(System.in);
+		System.out.println("Digite um numero inteiro para calcular a soma dos impares");
+		int n = ler.nextInt();
+		int soma = 0;
+		int contar = 0;
+		int numero = 1;
+		
+		while (contar < n) {
+			soma += numero;
+			numero +=2;
+			contar++;
+		}
+		System.out.println("A soma dos primeiros " + n +" numeros impares é : " +soma);
+	}
+
+}
+
+ex 9 : 
+
+import java.util.Scanner;
+import java.util.Arrays;
+
+public class VerificarUltimoNome {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        String[] listaNomes = new String[5];
+
+        for (int i = 0; i < 5; i++) {
+            System.out.print("Digite o " + (i + 1) + "º nome: ");
+            listaNomes[i] = scanner.nextLine();
+        }
+
+        System.out.print("Digite o sexto nome: ");
+        String sextoNome = scanner.nextLine();
+
+        boolean encontrado = false;
+        for (String nome : listaNomes) {
+            if (nome.equals(sextoNome)) {
+                encontrado = true;
+                break;
+            }
+        }
+
+        if (encontrado) {
+            System.out.println("O 6 nome esta na lista");
+        } else {
+            System.out.println("O 6 nome nao esta na lista.");
+        }
+    }
+}
+
+ex 10: 
+import java.util.Scanner;
+
+public class SenhaSecreta {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        String senhaSecreta = "blabla123";
+
+        System.out.print("Digite a senha: ");
+        String tentativaSenha = scanner.nextLine();
+
+        while (!tentativaSenha.equals(senhaSecreta)) {
+            System.out.println("Tentativa inválida. Tente novamente.");
+            System.out.print("Digite a senha: ");
+            tentativaSenha = scanner.nextLine();
+        }
+
+        System.out.println("Senha correta. Acesso liberado passe");
+
+    }
+}
+
+
+
