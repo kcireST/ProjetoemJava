@@ -1,0 +1,77 @@
+EXERCÍCIO 1
+
+
+import java.util.Scanner;
+public class SomaMatrizes {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int colunas = 3;
+        int[][] matrizB = new int[linhas][colunas];
+        for (int i = 0; i < linhas; i++) {
+            for (int j = 0; j < colunas; j++) {
+                matrizA[i][j] = scanner.nextInt();            }        }
+        for (int i = 0; i < linhas; i++) {
+            for (int j = 0; j < colunas; j++) {
+                matrizB[i][j] = scanner.nextInt();            }        }
+        for (int i = 0; i < linhas; i++) {
+            for (int j = 0; j < colunas; j++) {
+                matrizC[i][j] = matrizA[i][j] + matrizB[i][j];
+            }
+        }
+        System.out.println("Matriz resultante (C):");
+        for (int i = 0; i < linhas; i++) {
+            for (int j = 0; j < colunas; j++) {
+                System.out.print(matrizC[i][j] + " ");
+            }
+            System.out.println();
+        }
+        scanner.close();
+    }
+}
+
+
+
+
+EXERCÍCIO 2 
+
+
+import java.util.Scanner; public class VerificadorLoginSenha {     public static void main(String[] args) {               String[][] matrizUsuarios = {                 {"usuario1", "senha123"},                 {"usuario2", "senha456"},                 {"usuario3", "senha789"},                 {"usuario4", "senhaabc"},                 {"usuario5", "senhaxyz"},                 {"usuario6", "senha456"}         };       Scanner scanner = new Scanner(System.in);         System.out.print("Digite o login: ");         String loginDigitado = scanner.nextLine();         System.out.print("Digite a senha: ");         String senhaDigitada = scanner.nextLine();      zboolean loginValido = false;         for (int i = 0; i < matrizUsuarios.length; i++) {             String usuarioArmazenado = matrizUsuarios[i][0];             String senhaArmazenada = matrizUsuarios[i][1];             if (usuarioArmazenado.equals(loginDigitado) && senhaArmazenada.equals(senhaDigitada)) {                 loginValido = true;                 break;             }         }      if (loginValido) {             System.out.println("Login e senha válidos. Acesso permitido!");         } else {             System.out.println("Login ou senha inválidos. Acesso negado.");         }     } }
+
+
+
+
+EXERCÍCIO 3
+
+
+
+
+import java.util.Scanner;
+
+public class MatrizTransposta {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int linhas = 3;
+        int colunas = 3;
+        int[][] matriz = new int[linhas][colunas];
+        System.out.println("Digite os elementos da matriz:");
+        for (int i = 0; i < linhas; i++) {
+            for (int j = 0; j < colunas; j++) {
+                matriz[i][j] = scanner.nextInt();
+            }
+        }
+        int[][] matrizTransposta = new int[colunas][linhas];
+        for (int i = 0; i < colunas; i++) {
+            for (int j = 0; j < linhas; j++) {
+                matrizTransposta[i][j] = matriz[j][i];
+            }
+        }
+        System.out.println("Matriz transposta:");
+        for (int i = 0; i < colunas; i++) {
+            for (int j = 0; j < linhas; j++) {
+                System.out.print(matrizTransposta[i][j] + " ");
+            }
+            System.out.println();
+        }
+        scanner.close();
+    }
+}
